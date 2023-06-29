@@ -23,6 +23,7 @@
 <script src="https://artic.leosight.cz/design/mapa/js/SanMap.min.js"></script>
 <script>
     var currentSearch = window.location.search;
+    var currentHref = window.location.href;
 
     var mapType = new SanMapType(0, 2, function (zoom, x, y) {
         return x == -1 && y == -1 ? "https://artic.leosight.cz/design/mapa/tiles/map.outer.png" : "https://artic.leosight.cz/design/mapa/tiles/map." + zoom + "." + x + "." + y + ".png";
@@ -51,6 +52,6 @@
 
     gsi.open(gsi, gsiMarker);
 
-
+    console.log(window.location)
 </script>
 </body>
