@@ -16,7 +16,6 @@
     </style>
 </head>
 <body>
-
 <div id="map-canvas"></div>
 
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyCo-09fHxV3NRRGfoXsdVPRgvJ-yDLTsb8"></script>
@@ -53,8 +52,17 @@
         gsi.open(gsi, gsiMarker);
     }
 
-    console.log(window.parent);
-    console.log(window.self);
+    // Získání aktuální URL adresy
+    var currentURL = window.location.href;
 
+    // Získání parametrů z URL adresy
+    var urlParams = new URLSearchParams(currentURL);
+
+    // Získání hodnoty parametru "loc"
+    var locParam = urlParams.get('loc');
+
+    // Výpis hodnoty parametru "loc" do konzole
+    console.log(locParam);
+    console.log(urlParams);
 </script>
 </body>
