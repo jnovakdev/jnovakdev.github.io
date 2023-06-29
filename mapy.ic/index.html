@@ -52,17 +52,17 @@
         gsi.open(gsi, gsiMarker);
     }
 
-    // Získání aktuální URL adresy
-    var currentURL = window.location.href;
+    // Získání odkazu na rodičovský prvek
+    var parentWindow = window.parent;
 
-    // Získání parametrů z URL adresy
-    var urlParams = new URLSearchParams(currentURL);
+    // Získání URL adresy rodičovského okna
+    var parentURL = parentWindow.location.href;
 
-    // Získání hodnoty parametru "loc"
-    var locParam = urlParams.get('loc');
+    // Získání hodnoty parametru "loc" z URL adresy
+    var locParam = parentURL.split('?loc=')[1];
 
     // Výpis hodnoty parametru "loc" do konzole
     console.log(locParam);
-    console.log(urlParams);
+    console.log(parentURL);
 </script>
 </body>
