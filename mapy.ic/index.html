@@ -70,5 +70,24 @@
     if(currentSearch.includes("?loc=ufc")) {
         ufc.open(ufc, ufcMarker);
     }
+
+    var vng = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>VANGUARD</strong><br>" +
+            "Soukromá bezpečnostní agentura<br>" +
+            "Kontakt: info@vanguard.ic"
+    });
+    var vngMarker = new google.maps.Marker({
+        position: {lat: 28.3876226807, lng: 65.0982568359},
+        map: map,
+        title: "Underground FightClub",
+    });
+    vngMarker.addListener("click", function() {
+        vng.open(vng, vngMarker);
+    });
+
+    if(currentSearch.includes("?loc=vng")) {
+        vng.open(vng, vngMarker);
+    }
 </script>
 </body>
