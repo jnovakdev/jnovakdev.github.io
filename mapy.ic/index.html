@@ -42,7 +42,7 @@
     var gsiMarker = new google.maps.Marker({
         position: {lat: 78.1879101562, lng: -7.55572265625},
         map: map,
-        title: "ResourceXchange Ltd.",
+        title: "Golden State Investments",
     });
     gsiMarker.addListener("click", function() {
         gsi.open(gsi, gsiMarker);
@@ -50,6 +50,25 @@
 
     if(currentSearch.includes("?loc=gsi")) {
         gsi.open(gsi, gsiMarker);
+    }
+
+    var ufc = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Undergroud FightClub</strong><br>" +
+            "Organizátor profesionálných zápasov v boxe!<br>" +
+            "Kontakt: info@underground.ic"
+    });
+    var ufcMarker = new google.maps.Marker({
+        position: {lat: 11.0932324219, lng: 38.3882519531},
+        map: map,
+        title: "Undergroud FightClub",
+    });
+    ufcMarker.addListener("click", function() {
+        ufc.open(ufc, ufcMarker);
+    });
+
+    if(currentSearch.includes("?loc=ufc")) {
+        ufc.open(ufc, ufcMarker);
     }
 </script>
 </body>
