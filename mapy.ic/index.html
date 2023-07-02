@@ -32,6 +32,7 @@
 
     map.setOptions({scrollwheel:true});
 
+    // ---------- Golden State Investments ----------
     var gsi = new google.maps.InfoWindow({
         content: "" +
             "<strong>Golden State Investments</strong><br>" +
@@ -52,11 +53,13 @@
         gsi.open(gsi, gsiMarker);
     }
 
+    // ---------- Underground FightClub ----------
     var ufc = new google.maps.InfoWindow({
         content: "" +
             "<strong>Underground FightClub</strong><br>" +
             "Organizátor profesionálných zápasov v boxe!<br>" +
-            "Kontakt: info@underground.ic"
+            "Kontakt: info@underground.ic / 640-935<br>" +
+            "<a href='https://artic.leosight.cz/iris.ic/undergroundfightclub'>Iris profil</a>"
     });
     var ufcMarker = new google.maps.Marker({
         position: {lat: 11.0932324219, lng: 38.3882519531},
@@ -71,6 +74,12 @@
         ufc.open(ufc, ufcMarker);
     }
 
+    if(currentSearch.includes("?loc=underground")) {
+        ufc.open(ufc, ufcMarker);
+    }
+
+
+    // ---------- VANGUARD ----------
     var vng = new google.maps.InfoWindow({
         content: "" +
             "<strong>VANGUARD</strong><br>" +
@@ -90,6 +99,7 @@
         vng.open(vng, vngMarker);
     }
 
+    // ---------- CoverUP Garage ----------
     var coverup = new google.maps.InfoWindow({
         content: "" +
             "<strong>CoverUP Garage</strong><br>" +
@@ -99,7 +109,7 @@
     var coverupMarker = new google.maps.Marker({
         position: {lat: -55.9449902344, lng: 57.9163476562},
         map: map,
-        title: "Underground FightClub",
+        title: "CoverUP Garage",
         icon: "coverup.png"
     });
     coverupMarker.addListener("click", function() {
