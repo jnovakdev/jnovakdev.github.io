@@ -36,7 +36,7 @@
         content: "" +
             "<strong>Golden State Investments</strong><br>" +
             "Sídlo investičního fondu provozující platformu mapy.ic<br>" +
-            "Poplatek za přidání blipu: 500.000 Kč<br>" +
+            "Ceník: ratt.cz/SEZA<br>" +
             "Kontakt: info@mapy.ic / 221-221"
     });
     var gsiMarker = new google.maps.Marker({
@@ -80,7 +80,7 @@
     var vngMarker = new google.maps.Marker({
         position: {lat: 28.3876226807, lng: 65.0982568359},
         map: map,
-        title: "Underground FightClub",
+        title: "VANGUARD",
     });
     vngMarker.addListener("click", function() {
         vng.open(vng, vngMarker);
@@ -89,5 +89,26 @@
     if(currentSearch.includes("?loc=vng")) {
         vng.open(vng, vngMarker);
     }
+
+    var coverup = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>CoverUP Garage</strong><br>" +
+            "Autodílna s šikovnejma klukama<br>" +
+            "Kontakt: 677-820 nebo 877-029"
+    });
+    var coverupMarker = new google.maps.Marker({
+        position: {lat: -55.9449902344, lng: 57.9163476562},
+        map: map,
+        title: "Underground FightClub",
+        icon: "coverup.png"
+    });
+    coverupMarker.addListener("click", function() {
+        coverup.open(coverup, coverupMarker);
+    });
+
+    if(currentSearch.includes("?loc=coverup")) {
+        coverup.open(coverup, coverupMarker);
+    }
+
 </script>
 </body>
