@@ -159,5 +159,26 @@
         befit.open(befit, befitMarker);
     }
 
+    // ---------- Casino ----------
+    var casino = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Casino Las Venturas</strong><br>" +
+            "Zkusíš štěstí? Tak se ukaž<br>" +
+            "Nejlepší casino v San Andreas<br>" +
+            "Kontakt: 665-490"
+    });
+    var casinoMarker = new google.maps.Marker({
+        position: {lat: 64.8657128906, lng: 64.9343847656},
+        map: map,
+        title: "Casino Las Venturas",
+    });
+    casinoMarker.addListener("click", function() {
+        casino.open(casino, casinoMarker);
+    });
+
+    if(currentSearch.includes("?loc=casino")) {
+        casino.open(casino, casinoMarker);
+    }
+
 </script>
 </body>
