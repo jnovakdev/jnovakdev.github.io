@@ -139,5 +139,25 @@
         dls.open(dls, dlsMarker);
     }
 
+    // ---------- BeFIT ----------
+    var befit = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>BeFIT</strong><br>" +
+            "Bližší informace: ratt.cz/GABU<br>" +
+            "Kontakt: yukimura.torio@post.ic"
+    });
+    var befitMarker = new google.maps.Marker({
+        position: {lat: 2.02086914062, lng: 67.064296875},
+        map: map,
+        title: "BeFIT",
+    });
+    befitMarker.addListener("click", function() {
+        befit.open(befit, befitMarker);
+    });
+
+    if(currentSearch.includes("?loc=befit")) {
+        befit.open(befit, befitMarker);
+    }
+
 </script>
 </body>
