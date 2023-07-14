@@ -180,5 +180,25 @@
         casino.open(casino, casinoMarker);
     }
 
+    // ---------- Autobazar Duo ----------
+    var duo = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Autobazar Duo</strong><br>" +
+            "Cenově dostupná vozidla pro každého<br>" +
+            "Kontakt: Kontakt: 891-548 / mason.carr@post.ic"
+    });
+    var duoMarker = new google.maps.Marker({
+        position: {lat: 64.29578125, lng: 58.9451074219},
+        map: map,
+        title: "Autobazar Duo",
+    });
+    duoMarker.addListener("click", function() {
+        duo.open(duo, duoMarker);
+    });
+
+    if(currentSearch.includes("?loc=duo")) {
+        duo.open(duo, duoMarker);
+    }
+
 </script>
 </body>
