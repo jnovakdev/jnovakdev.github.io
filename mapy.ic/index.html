@@ -200,5 +200,26 @@
         duo.open(duo, duoMarker);
     }
 
+    // ---------- RALLY EVENT ----------
+    var rally = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>🏁 Rally Event: DUSTY HORIZON 🏁</strong><br>" +
+            "Historicky 7. rally event! Unikátní autíčkářská akce!\n<br>" +
+            "Bližší info:  ratt.cz/XUDI<br><br>" +
+            "Akce proběhne 29.07.2023 kolem 20:00<br>"
+    });
+    var rallyMarker = new google.maps.Marker({
+        position: {lat: -33.1574707031, lng: -5.91369140625},
+        map: map,
+        title: "Rally Event",
+    });
+    rallyMarker.addListener("click", function() {
+        rally.open(rally, rallyMarker);
+    });
+
+    if(currentSearch.includes("?loc=rally")) {
+        rally.open(rally, rallyMarker);
+    }
+
 </script>
 </body>
