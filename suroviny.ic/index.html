@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs" data-bs-theme="light">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Suroviny.ic by RSX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./design/bootstrap53.min.css">
+    <link rel="stylesheet" href="./design/common.css">
+    <link rel="stylesheet" href="./design/fontawesome.min.css">
+    <script src="./design/jquery.min.js"></script>
+    <script src="./design/popper.min.js"></script>
+    <script src="./design/bootstrap53.min.js"></script>
+    <script src="./design/common.js"></script>
+</head>
+<body>
+<header>
+    <div class="container px-lg-5 my-5 text-center">
+        <h1><img class="w-50 img-fluid" src="./design/LOGO.png" alt="AUTODILY.IC"></h1>
+    </div>
+</header>
+<main>
+    <div class="container px-lg-5 my-5">
+        <div class="border py-4 mb-5">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <h3 class="text-center mb-5">Suroviny</h3>
+                        <div class="col-6">
+                            <div class="mb-3 mx-3">
+                                <label for="ironCount">Železo:</label>
+                                <input type="number" class="form-control" id="ironCount" min="1" value="0" step="1" required>
+                            </div>
+                            <div class="mb-3 mx-3">
+                                <label for="zincCount">Zinek:</label>
+                                <input type="number" class="form-control" id="zincCount" min="1" value="0" step="1" required>
+                            </div>
+                            <div class="mb-3 mx-3">
+                                <label for="aluminiumCount">Hliník:</label>
+                                <input type="number" class="form-control" id="aluminiumCount" min="1" value="0" step="1" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3 mx-3">
+                                <label for="copperCount">Měď:</label>
+                                <input type="number" class="form-control" id="copperCount" min="1" value="0" step="1" required>
+                            </div>
+                            <div class="mb-3 mx-3">
+                                <label for="goldCount">Zlato:</label>
+                                <input type="number" class="form-control" id="goldCount" min="1" value="0" step="1" required>
+                            </div>
+                            <div class="mb-3 mx-3">
+                                <label for="tinCount">Cín:</label>
+                                <input type="number" class="form-control" id="tinCount" min="1" value="0" step="1" required>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h3 class="text-center mb-5">Odměna</h3>
+                    <div class="fs-1 h-55 d-flex align-items-center justify-content-center">
+                        <span id="reward">123.456.789,- Kč</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container px-lg-5 my-5">
+        <p class="text-muted text-center">
+            Web suroviny.ic provozuje společnost ResourceXchange Ltd. (IČO: 495)<br>
+            ResourceXchange Ltd. spadá do skupiny Golden State Investments<br>
+            Kontakt: info@suroviny.ic / 221-221
+        </p>
+    </div>
+</footer>
+<script src="js/main.js?v=1"></script>
+</body>
+</html>
