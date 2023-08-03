@@ -185,7 +185,7 @@
         content: "" +
             "<strong>Autobazar Duo</strong><br>" +
             "Cenově dostupná vozidla pro každého<br>" +
-            "Kontakt: Kontakt: 891-548 / mason.carr@post.ic"
+            "Kontakt: 891-548 / mason.carr@post.ic"
     });
     var duoMarker = new google.maps.Marker({
         position: {lat: 64.29578125, lng: 58.9451074219},
@@ -198,6 +198,26 @@
 
     if(currentSearch.includes("?loc=duo")) {
         duo.open(duo, duoMarker);
+    }
+
+    // ---------- Autobazar Duo ----------
+    var bob = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Autobazar u Tvrdého Boba</strong><br>" +
+            "Ojeté vozy za přívětinou cenu!<br>" +
+            "Kontakt: 671-269 nebo 334-191"
+    });
+    var bobMarker = new google.maps.Marker({
+        position: {lat: 61.1029003906, lng: 66.9222070312},
+        map: map,
+        title: "Autobazar u Tvrdého Boba",
+    });
+    bobMarker.addListener("click", function() {
+        bob.open(bob, bobMarker);
+    });
+
+    if(currentSearch.includes("?loc=tvrdybob")) {
+        bob.open(bob, bobMarker);
     }
 </script>
 </body>
