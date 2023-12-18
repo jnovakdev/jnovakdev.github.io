@@ -219,5 +219,25 @@
     if(currentSearch.includes("?loc=tvrdybob")) {
         bob.open(bob, bobMarker);
     }
+
+    // ---------- Los Santos Motorcycle Garage ----------
+    var lsmg = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Los Santos Motorcycle Garage</strong><br>" +
+            "Profesionální a prémiová péče, servis a údržba motorek<br>" +
+            "Kontakt: 624-729 // ezechiel.warren@post.ic"
+    });
+    var lsmgMarker = new google.maps.Marker({
+        position: {lat: -56.6131347656, lng: 66.9222070312},
+        map: map,
+        title: "Los Santos Motorcycle Garage",
+    });
+    lsmgMarker.addListener("click", function() {
+        lsmg.open(lsmg, lsmgMarker);
+    });
+
+    if(currentSearch.includes("?loc=lsmg")) {
+        lsmg.open(lsmg, lsmgMarker);
+    }
 </script>
 </body>
