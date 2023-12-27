@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./design/bootstrap53.min.css">
     <link rel="stylesheet" href="./design/common.css">
     <link rel="stylesheet" href="./design/fontawesome.min.css">
+    <link rel="stylesheet" href="./design/suroviny.css">
     <script src="./design/jquery.min.js"></script>
     <script src="./design/popper.min.js"></script>
     <script src="./design/bootstrap53.min.js"></script>
@@ -22,6 +23,30 @@
     <div class="container px-lg-5 my-5">
         <div class="border py-4 mb-5">
             <div class="row">
+                <div class="col-12">
+                    <p class="text-center">
+                        <a class="btn btn-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Jak to funguje?
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body border-0 px-5">
+                            <p>
+                                Pokud disponujete skladem surovin a nemáte pro ně využití, níže si můžete naklikat námi nabízenou cenu za Vaše zásoby.
+                            </p>
+                            <p>
+                                Proces je poté následující:
+                            </p>
+                            <ul>
+                                <li>Napište email na info@suroviny.ic, kam napíšete kolik a jakých surovin máte + Vaše telefonní číslo</li>
+                                <li>Budete kontaktování (buď mobil, nebo email) a domluvíme místo předání</li>
+                                <li>Předáte suroviny</li>
+                                <li>Přepočítáme</li>
+                                <li>Předáváme odměnu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-12 col-lg-6">
                     <div class="row px-3">
                         <h3 class="text-center mb-5 pb-4 border-bottom mx-2">Suroviny</h3>
@@ -32,11 +57,11 @@
                             </div>
                             <div class="mb-3 mx-3">
                                 <label for="zincCount">Zinek:</label>
-                                <input type="number" class="form-control" id="zincCount" min="0" value="0" step="1" required disabled>
+                                <input type="number" class="form-control" id="zincCount" min="0" value="0" step="1" required >
                             </div>
                             <div class="mb-3 mx-3">
                                 <label for="aluminiumCount">Hliník:</label>
-                                <input type="number" class="form-control" id="aluminiumCount" min="0" value="0" step="1" required disabled>
+                                <input type="number" class="form-control" id="aluminiumCount" min="0" value="0" step="1" required >
                             </div>
                         </div>
                         <div class="col-6">
