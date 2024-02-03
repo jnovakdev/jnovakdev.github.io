@@ -239,5 +239,26 @@
     if(currentSearch.includes("?loc=lsmg")) {
         lsmg.open(lsmg, lsmgMarker);
     }
+
+    // ---------- Sayonara Restaurant ----------
+    var sayonara = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Sayonara Restaurant</strong><br>" +
+            "Rezervace stolů pouze přes post.ic<br>" +
+            "Kontakt: kanji.matsutoto@post.ic"
+    });
+    var sayonaraMarker = new google.maps.Marker({
+        position: {lat: 22.0002089844, lng: -65.9514648437},
+        map: map,
+        title: "Sayonara Restaurant",
+        icon: "sayonara.png"
+    });
+    sayonaraMarker.addListener("click", function() {
+        sayonara.open(sayonara, sayonaraMarker);
+    });
+
+    if(currentSearch.includes("?loc=sayonara")) {
+        sayonara.open(sayonara, sayonaraMarker);
+    }
 </script>
 </body>
