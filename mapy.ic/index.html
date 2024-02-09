@@ -260,5 +260,26 @@
     if(currentSearch.includes("?loc=sayonara")) {
         sayonara.open(sayonara, sayonaraMarker);
     }
+
+    // ---------- ALL-IN Corporation ----------
+    var allin = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>ALL-IN Corporation</strong><br>" +
+            "Obchod, servis a odtahové služby na jednom místě<br>" +
+            "Kontakt: martin.dope@post.ic"
+    });
+    var allinMarker = new google.maps.Marker({
+        position: {lat: 6.924765625, lng: 41.923515625},
+        map: map,
+        title: "ALL-IN Corporation",
+        icon: "allin.png"
+    });
+    allinMarker.addListener("click", function() {
+        allin.open(allin, allinMarker);
+    });
+
+    if(currentSearch.includes("?loc=allin")) {
+        allin.open(allin, allinMarker);
+    }
 </script>
 </body>
