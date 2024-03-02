@@ -281,5 +281,26 @@
     if(currentSearch.includes("?loc=allin")) {
         allin.open(allin, allinMarker);
     }
+
+    // ---------- Downtown Club ----------
+    var downtown = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Downtown Club</strong><br>" +
+            "Neoblíbenější klub ve státě<br>" +
+            "Kontakt: martin.dope@post.ic"
+    });
+    var downtownMarker = new google.maps.Marker({
+        position: {lat: -27.7884667969, lng: 43.2157617187},
+        map: map,
+        title: "Downtown Club",
+        icon: "downtown.png"
+    });
+    downtownMarker.addListener("click", function() {
+        downtown.open(downtown, downtownMarker);
+    });
+
+    if(currentSearch.includes("?loc=downtown")) {
+        downtown.open(downtown, downtownMarker);
+    }
 </script>
 </body>
