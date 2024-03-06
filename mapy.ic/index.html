@@ -302,5 +302,26 @@
     if(currentSearch.includes("?loc=downtown")) {
         downtown.open(downtown, downtownMarker);
     }
+
+    // ---------- Downtown Club ----------
+    var rockhotel = new google.maps.InfoWindow({
+        content: "" +
+            "<strong>Rock Hotel</strong><br>" +
+            "Ve spolupráci s Casinem Las Venturas<br>" +
+            "Ještě větší Casino!<br>" +
+            "Kontakt: 665-490"
+    });
+    var rockhotelMarker = new google.maps.Marker({
+        position: {lat: 70.0610058594, lng: 79.2014355469},
+        map: map,
+        title: "Rock Hotel",
+    });
+    rockhotelMarker.addListener("click", function() {
+        rockhotel.open(rockhotel, rockhotelMarker);
+    });
+
+    if(currentSearch.includes("?loc=rockhotel")) {
+        rockhotel.open(rockhotel, rockhotelMarker);
+    }
 </script>
 </body>
